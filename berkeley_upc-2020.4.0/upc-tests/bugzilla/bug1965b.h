@@ -1,2 +1,0 @@
-(void)
-{ return 1; }

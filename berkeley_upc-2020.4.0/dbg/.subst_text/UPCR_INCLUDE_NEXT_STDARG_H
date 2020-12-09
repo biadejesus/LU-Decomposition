@@ -1,6 +1,0 @@
-
-      #if 1
-         #include_next <stdarg.h>
-         #include_next <stdarg.h>
-      #endif
-

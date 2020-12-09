@@ -1,6 +1,0 @@
-
-      #if 1
-         #include_next <inttypes.h>
-         #include_next <inttypes.h>
-      #endif
-
