@@ -1,5 +1,3 @@
-// CPP Program to decompose a matrix into
-// lower and upper traingular matrix
 #include <stdio.h>
 
 const int MAX = 100;

@@ -1,0 +1,51 @@
+Running as: ./multiconf.pl 
+top_srcdir=/home/beatrizdejesus/Documents/UEM/PC/projeto3/LU-Decomposition/berkeley_upc-2020.4.0
+top_builddir=/home/beatrizdejesus/Documents/UEM/PC/projeto3/LU-Decomposition/berkeley_upc-2020.4.0
+args: 
+Reading multiconf spec file [multiconf.conf.in]
+Setting CONFIGURE_OPTIONS=''
+Setting FORCED_OPTIONS=''
+Setting ENABLED_CONFS='dbg, opt'
+Setting BUPC_TRANS='http://upc-translator.lbl.gov/upcc-2020.4.0.cgi'
+Setting GUPC_TRANS='/usr/local/upc/bin/upc'
+Setting CUPC_TRANS='/usr/local/upc/bin/clang-upc'
+Setting CUPC2C_TRANS='/usr/local/upc/bin/clang-upc2c'
+Setting BLACKLISTED_ENABLE_OPTIONS='debug,trace,stats,inst'
+Setting BLACKLISTED_WITH_OPTIONS='gupc,cupc,clang-upc2c,translator'
+Final ENABLED_CONFS=dbg opt
+Read enabled conf: error ;  the -g flag is incompatibile with the -inst* flags ; $opt{'g'} && ( $opt{'inst'} || $opt{'inst-functions'} || $opt{'inst-local'} || $opt{'inst-toolname'} )  ; 
+Read enabled conf: error ;  the -bupc and -gccupc flags are mutually exclusive ; $opt{'bupc'} && $opt{'gccupc'}  ; 
+Read enabled conf: error ;  the -bupc and -gupc flags are mutually exclusive ; $opt{'bupc'} && $opt{'gupc'}  ; 
+Read enabled conf: error ;  the -cupc2c and -gccupc flags are mutually exclusive ; $opt{'cupc2c'} && $opt{'gccupc'}  ; 
+Read enabled conf: error ;  the -cupc2c and -gupc flags are mutually exclusive ; $opt{'cupc2c'} && $opt{'gupc'}  ; 
+Read enabled conf: error ;  the -cupc2c and -bupc flags are mutually exclusive ; $opt{'cupc2c'} && $opt{'bupc'}  ; 
+Read enabled conf: error ;  the -cupc and -gccupc flags are mutually exclusive ; $opt{'cupc'} && $opt{'gccupc'}  ; 
+Read enabled conf: error ;  the -cupc and -gupc flags are mutually exclusive ; $opt{'cupc'} && $opt{'gupc'}  ; 
+Read enabled conf: error ;  the -cupc and -bupc flags are mutually exclusive ; $opt{'cupc'} && $opt{'bupc'}  ; 
+Read enabled conf: error ;  the -cupc and -cupc2c flags are mutually exclusive ; $opt{'cupc'} && $opt{'cupc2c'}  ; 
+Read disabled conf: dbg_gupc ;  --with-gupc="${GUPC_TRANS}" --enable-debug  ; $opt{'g'} && ( $opt{'gupc'} || $opt{'gccupc'} )  ; gupc,gccupc
+Read disabled conf: opt_gupc ;  --with-gupc="${GUPC_TRANS}"  ; $opt{'gupc'} || $opt{'gccupc'}  ; gupc,gccupc
+Read disabled conf: dbg_cupc ;  --with-cupc="${CUPC_TRANS}" --disable-par --enable-debug  ; $opt{'g'} && $opt{'cupc'}  ; cupc
+Read disabled conf: opt_cupc ;  --with-cupc="${CUPC_TRANS}" --disable-par  ; $opt{'cupc'}  ; cupc
+Read disabled conf: dbg_cupc2c ;  --with-clang-upc2c="${CUPC2C_TRANS}" --enable-debug  ; $opt{'g'} && $opt{'cupc2c'}  ; cupc2c
+Read disabled conf: opt_cupc2c_trace ;  --with-clang-upc2c="${CUPC2C_TRANS}" --enable-trace --enable-stats  ; $opt{'cupc2c'} && $opt{'trace'}  ; cupc2c
+Read disabled conf: opt_cupc2c_inst ;  --with-clang-upc2c="${CUPC2C_TRANS}" --enable-inst  ; $opt{'cupc2c'} && ( $opt{'inst'} || $opt{'inst-functions'} || $opt{'inst-local'} || $opt{'inst-toolname'} )  ; cupc2c
+Read disabled conf: opt_cupc2c ;  --with-clang-upc2c="${CUPC2C_TRANS}"  ; $opt{'cupc2c'}  ; cupc2c
+Read enabled conf: dbg ;  --with-translator="$BUPC_TRANS" --enable-debug  ; $opt{'g'}  ; bupc
+Read disabled conf: opt_trace ;  --with-translator="$BUPC_TRANS" --enable-trace --enable-stats  ; $opt{'trace'}  ; bupc
+Read disabled conf: opt_inst ;  --with-translator="$BUPC_TRANS" --enable-inst  ; ( $opt{'inst'} || $opt{'inst-functions'} || $opt{'inst-local'} ) || $opt{'inst-toolname'}  ; bupc
+Read enabled conf: opt ;  --with-translator="$BUPC_TRANS"  ; 1  ; bupc
+Enabled confs (2): dbg opt
+Default conf: opt
+Copying /home/beatrizdejesus/Documents/UEM/PC/projeto3/LU-Decomposition/berkeley_upc-2020.4.0/multiconf.conf.in -> /home/beatrizdejesus/Documents/UEM/PC/projeto3/LU-Decomposition/berkeley_upc-2020.4.0/multiconf.conf
+Writing makefile [Makefile] with confs: dbg opt
+Creating directory: dbg
+Running dbg configure: 
+cd dbg && /home/beatrizdejesus/Documents/UEM/PC/projeto3/LU-Decomposition/berkeley_upc-2020.4.0/configure   --with-translator="$BUPC_TRANS" --enable-debug   --prefix='/usr/local/berkeley_upc/dbg' --with-multiconf-magic=dbg
+dbg configure successful
+
+Creating directory: opt
+Running opt configure: 
+cd opt && /home/beatrizdejesus/Documents/UEM/PC/projeto3/LU-Decomposition/berkeley_upc-2020.4.0/configure   --with-translator="$BUPC_TRANS"   --prefix='/usr/local/berkeley_upc/opt' --with-multiconf-magic=opt
+opt configure successful
+

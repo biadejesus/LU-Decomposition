@@ -1,0 +1,19 @@
+# ARM64 cluster at ORNL
+
+batch_sys = slurm
+network = ibv
+
+queues = [
+        {
+          Q_name     => debug,
+          Q_maxnode  => 8,
+          Q_minnode  => 1,
+          Q_maxtpn   => 32,
+          Q_maxtime  => 04:00:00,
+        }
+]
+
+nthread_default = 8
+max_proc_per_node = 32
+
+run_env_default = { GASNET_IBV_PORTS => 'mlx5_0' }

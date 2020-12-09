@@ -1,0 +1,18 @@
+network = aries
+batch_sys = cobalt
+queues = [
+        {
+          Q_name     => debug-cache-quad,   
+          Q_maxnode  => 8,      
+          Q_minnode  => 1,       
+	  Q_maxtpn   => 16,      
+	  Q_maxtime  => 01:00:00,
+        },
+]
+
+repository = CSC250STPM17
+
+nthread_default = 8
+
+num_pthreads = 4
+max_proc_per_node = 1

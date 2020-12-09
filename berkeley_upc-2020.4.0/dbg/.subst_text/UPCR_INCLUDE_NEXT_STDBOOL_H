@@ -1,0 +1,6 @@
+
+      #if 1
+         #include_next <stdbool.h>
+         #include_next <stdbool.h>
+      #endif
+

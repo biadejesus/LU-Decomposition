@@ -1,0 +1,48 @@
+$UPCRSizeof: struct_promote=< $
+$UPCRSizeof: psptr_innerstruct=, $
+$UPCRSizeof: sptr_innerstruct=, $
+$UPCRSizeof: int64_innerstruct=, $
+$UPCRSizeof: dbl_innerstruct=, $
+$UPCRSizeof: psptrchar_struct=4 $
+$UPCRSizeof: sptrchar_struct=4 $
+$UPCRSizeof: int64char_struct=4 $
+$UPCRSizeof: dblchar_struct=4 $
+$UPCRSizeof: alignof_uint128_t=4 $
+$UPCRSizeof: alignof__Bool=% $
+$UPCRSizeof: alignof_size_t=, $
+$UPCRSizeof: alignof_longdouble=4 $
+$UPCRSizeof: alignof_double=, $
+$UPCRSizeof: alignof_float=( $
+$UPCRSizeof: alignof_longlong=, $
+$UPCRSizeof: alignof_long=, $
+$UPCRSizeof: alignof_short=& $
+$UPCRSizeof: alignof_int=( $
+$UPCRSizeof: alignof_char=% $
+$UPCRSizeof: alignof_ptrdiff_t=, $
+$UPCRSizeof: alignof_void_ptr=, $
+$UPCRSizeof: alignof_reg_handle=, $
+$UPCRSizeof: alignof_mem_handle=, $
+$UPCRSizeof: alignof_pshared_ptr=, $
+$UPCRSizeof: alignof_shared_ptr=, $
+$UPCRSizeof: phasebits=8 $
+$UPCRSizeof: _Bool=% $
+$UPCRSizeof: size_t=, $
+$UPCRSizeof: longdouble=4 $
+$UPCRSizeof: double=, $
+$UPCRSizeof: float=( $
+$UPCRSizeof: longlong=, $
+$UPCRSizeof: long=, $
+$UPCRSizeof: short=& $
+$UPCRSizeof: int=( $
+$UPCRSizeof: char=% $
+$UPCRSizeof: ptrdiff_t=, $
+$UPCRSizeof: void_ptr=, $
+$UPCRSizeof: reg_handle=, $
+$UPCRSizeof: mem_handle=, $
+$UPCRSizeof: pshared_ptr=, $
+$UPCRSizeof: shared_ptr=, $
+$UPCAtomics: Version 2.0 $
+$UPCRPageSize: 4096 $
+$UPCRBuildTimestamp: built on Dec  8 2020 at 15:17:51 $
+$UPCRConfig: (libupcr.a) VERSION=2020.4.0,PLATFORMENV=shared-distributed,SHMEM=pshm,SHAREDPTRREP=packed/p20:t10:a34,TRANS=berkeleyupc,nodebug,nogasp $
+$GASNetConfig: (libupcr.a) RELEASE=2020.3.0,SPEC=0.8,CONDUIT=MPI(MPI-2.9/REFERENCE-2020.3),THREADMODEL=SEQ,SEGMENT=FAST,PTR=64bit,CACHE_LINE_BYTES=64,noalign,pshm,nodebug,notrace,nostats,nodebugmalloc,nosrclines,timers_native,membars_native,atomics_native,atomic32_native,atomic64_native,notiopt $
