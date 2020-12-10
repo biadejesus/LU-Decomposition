@@ -118,8 +118,9 @@ void LUDecomposition(int dim)
 
 int main()
 {
-  gerar_matriz(3);
+  int tam= 1000;
+  gerar_matriz(tam);
   upc_barrier;
-  printar_matriz(3);
-  LUDecomposition(3);
+  printar_matriz(tam);
+  LUDecomposition(tam);
 }
