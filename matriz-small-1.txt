@@ -1,0 +1,15 @@
+UPCR: UPC thread 0 of 1 on pcdajesu (pshm node 0 of 1, process 0 of 1, pid=14357)
+
+time: 0.388713
+UPCR: UPC thread 0 of 1 on pcdajesu (pshm node 0 of 1, process 0 of 1, pid=14380)
+
+time: 0.389601
+UPCR: UPC thread 0 of 1 on pcdajesu (pshm node 0 of 1, process 0 of 1, pid=14403)
+
+time: 0.393792
+UPCR: UPC thread 0 of 1 on pcdajesu (pshm node 0 of 1, process 0 of 1, pid=14426)
+
+time: 0.394039
+UPCR: UPC thread 0 of 1 on pcdajesu (pshm node 0 of 1, process 0 of 1, pid=14449)
+
+time: 0.390481

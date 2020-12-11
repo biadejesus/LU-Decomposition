@@ -1,0 +1,30 @@
+UPCR: UPC thread 0 of 4 on pcdajesu (pshm node 0 of 1, process 0 of 4, pid=13569)
+UPCR: UPC thread 3 of 4 on pcdajesu (pshm node 0 of 1, process 3 of 4, pid=13594)
+UPCR: UPC thread 2 of 4 on pcdajesu (pshm node 0 of 1, process 2 of 4, pid=13593)
+UPCR: UPC thread 1 of 4 on pcdajesu (pshm node 0 of 1, process 1 of 4, pid=13592)
+
+time: 1.727530
+UPCR: UPC thread 0 of 4 on pcdajesu (pshm node 0 of 1, process 0 of 4, pid=13595)
+UPCR: UPC thread 2 of 4 on pcdajesu (pshm node 0 of 1, process 2 of 4, pid=13619)
+UPCR: UPC thread 1 of 4 on pcdajesu (pshm node 0 of 1, process 1 of 4, pid=13618)
+UPCR: UPC thread 3 of 4 on pcdajesu (pshm node 0 of 1, process 3 of 4, pid=13620)
+
+time: 1.755347
+UPCR: UPC thread 0 of 4 on pcdajesu (pshm node 0 of 1, process 0 of 4, pid=13621)
+UPCR: UPC thread 1 of 4 on pcdajesu (pshm node 0 of 1, process 1 of 4, pid=13644)
+UPCR: UPC thread 2 of 4 on pcdajesu (pshm node 0 of 1, process 2 of 4, pid=13645)
+UPCR: UPC thread 3 of 4 on pcdajesu (pshm node 0 of 1, process 3 of 4, pid=13646)
+
+time: 1.777921
+UPCR: UPC thread 0 of 4 on pcdajesu (pshm node 0 of 1, process 0 of 4, pid=13647)
+UPCR: UPC thread 2 of 4 on pcdajesu (pshm node 0 of 1, process 2 of 4, pid=13671)
+UPCR: UPC thread 1 of 4 on pcdajesu (pshm node 0 of 1, process 1 of 4, pid=13670)
+UPCR: UPC thread 3 of 4 on pcdajesu (pshm node 0 of 1, process 3 of 4, pid=13672)
+
+time: 1.743669
+UPCR: UPC thread 0 of 4 on pcdajesu (pshm node 0 of 1, process 0 of 4, pid=13673)
+UPCR: UPC thread 3 of 4 on pcdajesu (pshm node 0 of 1, process 3 of 4, pid=13698)
+UPCR: UPC thread 2 of 4 on pcdajesu (pshm node 0 of 1, process 2 of 4, pid=13697)
+UPCR: UPC thread 1 of 4 on pcdajesu (pshm node 0 of 1, process 1 of 4, pid=13696)
+
+time: 1.733558

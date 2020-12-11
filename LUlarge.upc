@@ -94,33 +94,50 @@ void LUDecomposition(int dim)
 
     upc_barrier;
   }
-  if (MYTHREAD == 0)
-  {
-    for (int i = 0; i < dim; i++)
-    {
-      for (int j = i * dim; j < i * dim + dim; j++)
-      {
-        printf("%.2f \t", upper[j]);
-      }
-      printf("\n");
-    }
-    printf("-----------------------------------------\n");
-    for (int i = 0; i < dim; i++)
-    {
-      for (int j = i * dim; j < i * dim + dim; j++)
-      {
-        printf("%.2f \t", lower[j]);
-      }
-      printf("\n");
-    }
-  }
+  // if (MYTHREAD == 0)
+  // {
+  //   for (int i = 0; i < dim; i++)
+  //   {
+  //     for (int j = i * dim; j < i * dim + dim; j++)
+  //     {
+  //       printf("%.2f \t", upper[j]);
+  //     }
+  //     printf("\n");
+  //   }
+  //   printf("-----------------------------------------\n");
+  //   for (int i = 0; i < dim; i++)
+  //   {
+  //     for (int j = i * dim; j < i * dim + dim; j++)
+  //     {
+  //       printf("%.2f \t", lower[j]);
+  //     }
+  //     printf("\n");
+  //   }
+  // }
+}
+double now()
+{
+  const double ONE_BILLION = 1000000000.0;
+  struct timespec current_time;
+
+  clock_gettime(CLOCK_REALTIME, &current_time);
+
+  return current_time.tv_sec + (current_time.tv_nsec / ONE_BILLION);
 }
 
 int main()
 {
-  int tam= 5000;
+  double t1, t2;
+  int tam = 1670;
   gerar_matriz(tam);
+  t1 = now();
   upc_barrier;
-  printar_matriz(tam);
+  //printar_matriz(tam);
   LUDecomposition(tam);
+  t2 = now();
+  if (MYTHREAD == 0)
+  {
+    printf("\ntime: %f", (t2 - t1));
+    printf("\n");
+  }
 }
