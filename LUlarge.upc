@@ -127,11 +127,17 @@ int main()
   double t1, t2;
   int tam = 1670;
   gerar_matriz(tam);
-  t1 = now();
+  if (MYTHREAD == 0)
+  {
+    t1 = now();
+  }
   upc_barrier;
   //printar_matriz(tam);
   LUDecomposition(tam);
-  t2 = now();
+  if (MYTHREAD == 0)
+  {
+    t2 = now();
+  }
   if (MYTHREAD == 0)
   {
     printf("\ntime: %f", (t2 - t1));

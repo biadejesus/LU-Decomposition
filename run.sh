@@ -1,32 +1,35 @@
 #!/bin/bash
 
-PARALELO=codigos/sap.out
-SEQUENCIAL=codigos/sa.out
+LARGE=lularge
+MEDIUM=lumedium
+SMALL=lusmall
 
 run(){
-	for input in nrw1379.tsp pla7397.tsp brd14051.tsp
+	mkdir saidas
+	for alg in $LARGE $MEDIUM $SMALL
 		do
-			echo "Executando o algoritmo sequencial... Arquivo: = $input"
+			echo "Executando o algoritmo $alg com 1 threads..."
 			START=$(date +%s.%N)
 			for ((i=1;i<=n;i++)); do
-				$SEQUENCIAL -t $temp -a $input
+				upcrun -n 1 $alg >> $alg-seq.txt
+				mv $alg-seq.txt saidas
 			done
-            		END=$(date +%s.%N)
+			END=$(date +%s.%N)
 			TIME_SEQ=$(python3 -c "print('{:.2f}'.format(${END} - ${START}))")
-			echo "Levou $TIME_SEQ segundos para rodar o $input sequencial"
 			echo ""
-			for p in 1 2 3 4
+			for t in 1 2 3 4
 				do
-					echo "Executando o algoritmo paralelo com $p processos... Input file = $input"
+					echo "Executando o algoritmo $alg com $t threads..."
 					START=$(date +%s.%N)
 					for ((i=1;i<=n;i++)); do
-						mpirun -n $p $PARALELO -t $temp -a $input
+						upcrun -n $t $alg >> $alg-$t.txt
+						mv $alg-$t.txt saidas
 					done
 					END=$(date +%s.%N)
 					TIME_PAR=$(python3 -c "print('{:.2f}'.format(${END} - ${START}))")
 					echo "Levou $TIME_PAR segundos para rodar o $input paralelo"
 					SPEEDUP=$(python3 -c "print('{:.2f}'.format(${TIME_SEQ} / ${TIME_PAR}))")
-					echo "o speedup para $input com $p processos foi $SPEEDUP"
+					echo "o speedup para $alg com $t threads foi $SPEEDUP"
 					echo ""
 				done
 		done
@@ -37,7 +40,6 @@ helpFunction()
     echo ""
     echo "Uso: $0 -n "
     echo -e "\t-n numero de vezes que o programa vai executar "
-    echo -e "\t-t temperatura inicial "
 	echo -e "\t-h ajuda "
 }
 
@@ -46,7 +48,6 @@ while getopts "n:t:h" opt
 do
    case "$opt" in
     n ) n="$OPTARG" ;;
-    t ) temp="$OPTARG" ;;
     h ) helpFunction ;;
     ? ) helpFunction ;;
   esac
@@ -56,12 +57,13 @@ if [ -z "$n" ]
 then
    echo "Parametros vazios";
    helpFunction
+   exit
 fi
 
 echo ""
 
-if [ -f "$PARALELO" ] && [ -f "$SEQUENCIAL" ] ; then
+if [ -f "$LARGE" ] && [ -f "$MEDIUM" ] && [ -f "$SMALL" ] ; then
 	run
 else 
-  echo "$PARALELO ou $SEQUENCIAL nao existem. Por favor execute 'make' antes de executar este script."
+  echo "$LARGE $MEDIUM $SMALL nao existem. Por favor execute 'make' antes de executar este script."
 fi
