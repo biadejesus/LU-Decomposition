@@ -21,12 +21,12 @@ void gerar_matriz(int dim)
 
   srand((time_t)ts.tv_nsec);
   matriz = upc_all_alloc(THREADS, dim * dim * sizeof(double));
-  int j, x;
+  int x;
   if (MYTHREAD == 0)
   {
     for (int i = 0; i < dim * dim; i++)
     {
-      matriz[i] = (rand() % 20);
+      matriz[i] = (rand() % dim);
     }
   }
 }
@@ -53,19 +53,16 @@ void LUDecomposition(int dim)
   upper = upc_all_alloc(THREADS, dim * dim * sizeof(double));
   lower = upc_all_alloc(THREADS, dim * dim * sizeof(double));
 
-  int ini = MYTHREAD * ((dim * dim) / THREADS);
-  int fim = ini + (((dim * dim) / THREADS) - 1);
-
   for (int i = 0; i < dim; i++) //percorre a matriz M
   {
     upc_forall(int j = i; j < dim; j++; j)
     {
-      double sum = 0;
+      double sum = 0.0;
       for (int k = 0; k < i; k++)
       {
-        sum += (lower[(i * dim) + k] * upper[(k * dim) + j]);
+        sum += (double)(lower[(i * dim) + k] * upper[(k * dim) + j]);
       }
-      upper[(dim * i) + j] = matriz[(dim * i) + j] - sum;
+      upper[(dim * i) + j] = (double)(matriz[(dim * i) + j] - sum);
     }
 
     upc_barrier;
@@ -78,17 +75,17 @@ void LUDecomposition(int dim)
       }
       else
       {
-        double sum = 0;
+        double sum = 0.0;
         for (int k = 0; k < i; k++)
         {
-          sum += (lower[(j * dim) + k] * upper[(k * dim) + i]);
+          sum += (double)(lower[(j * dim) + k] * upper[(k * dim) + i]);
         }
         if (upper[(dim * i) + i] == 0)
         {
           printf("\nDivisao por zero!");
           exit(EXIT_FAILURE);
         }
-        lower[(dim * j) + i] = ((matriz[(dim * j) + i] - sum) / upper[(dim * i) + i]);
+        lower[(dim * j) + i] = (double)((double)(matriz[(dim * j) + i] - sum) / upper[(dim * i) + i]);
       }
     }
 

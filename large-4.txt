@@ -1,17 +1,17 @@
-# started on Fri Dec 11 01:19:05 2020
+# started on Fri Dec 11 20:26:31 2020
 
 
- Performance counter stats for 'system wide' (5 runs):
+ Performance counter stats for 'system wide' (10 runs):
 
-       273.359.723        cache-misses                                                  ( +-  0,20% )  (57,07%)
-    42.605.963.784        cycles                                                        ( +-  0,27% )  (71,38%)
-    48.592.247.820        instructions              #    1,14  insn per cycle           ( +-  0,42% )  (85,69%)
-     5.784.395.922        branches                                                      ( +-  0,46% )  (85,72%)
-                11        mem-loads                                                     ( +- 47,43% )  (85,73%)
-         7.123.490        branch-misses             #    0,12% of all branches          ( +-  0,55% )  (85,75%)
-       760.941.053        mem-stores                                                    ( +-  3,09% )  (85,73%)
-              2,73 Joules power/energy-ram/                                             ( +-  0,57% )
-             57,63 Joules power/energy-pkg/                                             ( +-  1,07% )
+       303.509.996        cache-misses                                                  ( +-  1,74% )  (57,08%)
+    25.322.197.075        cycles                                                        ( +-  1,29% )  (71,39%)
+    46.691.758.379        instructions              #    1,84  insn per cycle           ( +-  0,27% )  (85,70%)
+     5.285.494.246        branches                                                      ( +-  0,43% )  (85,71%)
+                39        mem-loads                                                     ( +- 17,84% )  (85,73%)
+        13.857.496        branch-misses             #    0,26% of all branches          ( +-  6,52% )  (85,76%)
+       472.825.781        mem-stores                                                    ( +-  3,75% )  (85,71%)
+              3,00 Joules power/energy-ram/                                             ( +-  2,19% )
+             45,78 Joules power/energy-pkg/                                             ( +-  0,67% )
 
-            3,3806 +- 0,0162 seconds time elapsed  ( +-  0,48% )
+            3,2304 +- 0,0243 seconds time elapsed  ( +-  0,75% )
 
